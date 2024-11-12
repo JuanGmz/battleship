@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activación de Cuenta</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Contenedor principal */
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Encabezado */
+    .email-header {
+      background-color: #4CAF50;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Contenido del correo */
+    .email-body {
+      padding: 30px;
+    }
+
+    .email-body h1 {
+      font-size: 24px;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .email-body p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Botón de activación */
+    .activation-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .activation-button:hover {
+      background-color: #45a049;
+    }
+
+    /* Estilo del enlace de texto adicional */
+    .plain-link {
+      display: block;
+      font-size: 14px;
+      color: #4CAF50;
+      word-wrap: break-word;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Pie de página */
+    .email-footer {
+      background-color: #f4f4f4;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #666666;
+    }
+
+    .email-footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Encabezado -->
+    <div class="email-header">
+      <h2>Activación de Cuenta</h2>
+    </div>
+
+    <!-- Cuerpo del correo -->
+    <div class="email-body">
+      <h1>Hola, {{ user.fullName }}!</h1>
+      <p>Gracias por registrarte en nuestro sitio. Para activar tu cuenta, haz clic en el botón de abajo:</p>
+      <p>
+        <a href="{{ activateUrl }}" class="activation-button">Activar cuenta</a>
+      </p>
+      <p>Este enlace expirará en 1 minuto.</p>
+      <a href="{{ activateUrl }}" class="plain-link">{{ activateUrl }}</a>
+    </div>
+
+    <!-- Pie de página -->
+    <div class="email-footer">
+      <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+      <p>Si no solicitaste esta cuenta, puedes ignorar este mensaje.</p>
+    </div>
+  </div>
+</body>
+</html>

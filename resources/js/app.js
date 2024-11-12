@@ -1,0 +1,1 @@
+yconsole.log('Log from JS entrypoint')
