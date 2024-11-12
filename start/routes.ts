@@ -2,7 +2,6 @@ import router from '@adonisjs/core/services/router'
 import { middleware } from './kernel.js'
 import AuthController from '#controllers/auth_controller'
 import UsersController from '#controllers/users_controller'
-import SlacksController from '#controllers/slacks_controller'
 import GamesController from '#controllers/games_controller'
 import AttacksController from '#controllers/attacks_controller'
 
@@ -29,6 +28,3 @@ router.group(() => {
     }).use(middleware.checkRole(['admin', 'jugador']))
 })
 .use(middleware.auth({guards: ['api']}))
-
-// pendiente
-router.post('/slack-message', [SlacksController, 'slack'])
