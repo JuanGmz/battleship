@@ -26,7 +26,7 @@ const dbConfig = defineConfig({
       client: 'mysql2',  // Asegúrate de que el cliente esté configurado correctamente
       connection: {
         host: env.get('MYSQL_HOST'),
-        port: 3306,
+        port: parseInt(env.get('MYSQL_PORT') || '3306', 10),
         user: env.get('MYSQL_USER'),
         password: env.get('MYSQL_PASSWORD'),
         database: env.get('MYSQL_DATABASE'),

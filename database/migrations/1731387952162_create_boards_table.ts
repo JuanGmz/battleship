@@ -9,8 +9,9 @@ export default class extends BaseSchema {
       table.integer('game_id').unsigned().references('id').inTable('games').notNullable()
       table.integer('player_id').unsigned().references('id').inTable('users').notNullable()
       table.json('board_data').notNullable() // JSON column to store board positions
-      table.timestamps(true)
-      table.timestamp('deleted_at').nullable()
+      table.timestamp('created_at').nullable().defaultTo(null);
+      table.timestamp('updated_at').nullable().defaultTo(null);      
+      table.timestamp('deleted_at').nullable().defaultTo(null);
     })
   }
 

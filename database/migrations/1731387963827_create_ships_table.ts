@@ -11,8 +11,9 @@ export default class extends BaseSchema {
       table.integer('x').notNullable()
       table.integer('y').notNullable()
       table.boolean('hit').notNullable()
-      table.timestamps(true)
-      table.timestamp('deleted_at').nullable()
+      table.timestamp('created_at').nullable().defaultTo(null);
+      table.timestamp('updated_at').nullable().defaultTo(null);      
+      table.timestamp('deleted_at').nullable().defaultTo(null);
     })
   }
 

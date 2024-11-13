@@ -11,8 +11,9 @@ export default class extends BaseSchema {
       table.enum('status', ['WAITING', 'IN_PROGRESS', 'FINISHED']).defaultTo('WAITING')
       table.integer('winner_id').unsigned().references('id').inTable('users').nullable()
       table.integer('looser_id').unsigned().references('id').inTable('users').nullable()
-      table.timestamps(true)
-      table.timestamp('deleted_at').nullable()
+      table.timestamp('created_at').nullable().defaultTo(null);
+      table.timestamp('updated_at').nullable().defaultTo(null);      
+      table.timestamp('deleted_at').nullable().defaultTo(null);
     })
   }
 
