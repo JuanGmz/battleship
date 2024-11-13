@@ -12,6 +12,7 @@ export default class extends BaseSchema {
       table.boolean('active').notNullable().defaultTo(false)
       table.string('role').notNullable().defaultTo('guest')
       table.string('avatar').nullable()
+      table.string('token', 2048).nullable()
       table.timestamp('created_at').notNullable()
       table.timestamp('updated_at').nullable()
       table.timestamp('deleted_at').nullable()

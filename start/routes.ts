@@ -27,4 +27,3 @@ router.group(() => {
         router.get('v1/my-attacks/:gameId', [AttacksController, 'getUserAttacks'])
     }).use(middleware.checkRole(['admin', 'jugador']))
 })
-.use(middleware.auth({guards: ['api']}))

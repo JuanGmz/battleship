@@ -53,7 +53,7 @@
     "vite": "^5.4.10"
   },
   "dependencies": {
-    "@adonisjs/auth": "^9.2.3",
+    "@adonisjs/auth": "^9.2.4",
     "@adonisjs/bodyparser": "^10.0.2",
     "@adonisjs/core": "^6.14.1",
     "@adonisjs/cors": "^2.2.1",
@@ -68,6 +68,7 @@
     "ejs": "^3.1.10",
     "jsonwebtoken": "^9.0.2",
     "luxon": "^3.5.0",
+    "mysql2": "^3.11.4",
     "pg": "^8.13.1",
     "reflect-metadata": "^0.2.2"
   },
